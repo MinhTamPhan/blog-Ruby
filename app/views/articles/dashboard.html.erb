@@ -1,8 +1,8 @@
 <div class="page-header text-primary text-center">
-  <h1>Your Blogs</h1>
+  <h1>Your Post</h1>
 </div>
 <div class="text-right">
-<%= link_to 'new blog', new_article_path %>
+ <a class="nav-link text-right" href='/articles/new'>New Blog</a>
 </div>
  <br/>
 <div>
@@ -11,10 +11,11 @@
       <th>Title</th>
       <th>&nbsp;</th>
     </tr>
-    <tr class="success">
-    </tr>
-    <tr class="warning"></tr>
-    <tr class="danger"></tr>
-    <tr class="info"></tr>
+    <%@articles.each do |item| %>
+      <tr class="info">
+        <td><%=link_to item.title, article_path(item)%></td>
+        <td><%=item.text.truncate(100)%></td>
+      </tr>
+    <% end %>  
   </table>
 </div>
