@@ -40,3 +40,30 @@
 
 })(jQuery); // End of use strict
 
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $('#img_review').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+  
+$("#imgInp").change(function(){
+    readURL(this);
+});
+
+$("#frmcretate").validate({
+  rules: {
+    'article[title]': {
+      required: true,
+      minlength: 7
+    },
+    'article[text]': {
+      required: true,
+      minlength: 100
+    }
+  }
+});

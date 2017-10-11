@@ -16,4 +16,5 @@
 //= require popper/popper
 //= require bootstrap
 //= require articles
+//= require validate/jquery.validate
 //= require accounts
