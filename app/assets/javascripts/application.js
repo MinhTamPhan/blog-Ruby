@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery3
-//= require popper
 //= require bootstrap
 //= require jquery_ujs
 //= require rails-ujs
@@ -22,4 +21,16 @@ document.addEventListener("turbolinks:load", function() {
       $('li.active').removeClass('active');
   }
   $('a[href="' + location.pathname + '"]').parent('li').addClass('active');
+});
+$().ready(function(){
+  // the body of this function is in assets/material-kit.js
+  materialKit.initSliders();
+        window_width = $(window).width();
+
+        if (window_width >= 992){
+            big_image = $('.wrapper > .header');
+
+    $(window).on('scroll', materialKitDemo.checkScrollForParallax);
+  }
+
 });
