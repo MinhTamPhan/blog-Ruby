@@ -1,12 +1,21 @@
 doctype html
 html
   = render 'layouts/head'
-  meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  body.bg-light
-    = render 'layouts/header'
-    .container-fluid
-      .row
-        .col-md-3
-          = render 'layouts/navigation'
-        .col-md-9
-          = yield
+  body.m-page--fluid.m--skin-.m-content--skin-light2.m-header--fixed.m-header--fixed-mobile.m-aside-left--enabled.m-aside-left--skin-dark.m-aside-left--offcanvas.m-footer--push.m-aside--offcanvas-default class="#{params[:controller]} #{params[:action]}"
+    .m-grid.m-grid--hor.m-grid--root.m-page
+      = render 'layouts/header'
+      .m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-body
+        = render 'layouts/sidebar'
+
+        .m-grid__item.m-grid__item--fluid.m-wrapper
+          .m-subheader
+            .d-flex.align-items-center
+              .mr-auto
+                h3.m-subheader__title
+                  = yield :title
+                  //= render 'layouts/messages'
+          .m-content
+            = yield
+
+      //= render 'layouts/footer'
+      //= render 'layouts/scroll_top'

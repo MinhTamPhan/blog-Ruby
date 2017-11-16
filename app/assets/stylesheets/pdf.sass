@@ -1,0 +1,129 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require style.bundle
+ *= require jquery-ui/datepicker
+ *= require_tree ./common
+ *= require_tree ./pages
+ */
+
+#document
+  background-color: white
+
+.flex-item-image
+  float: left
+  width: 200px
+  margin: 10px
+
+.flex-item-text-title
+  float: left
+  width: 400px
+  text-align: center
+
+.flex-item-right
+  float: right !important
+  margin-left: 10px
+
+.flex-item-right
+  float: left !important
+  margin-right: 10px
+
+.m-content
+  clear: left
+  margin-top: 20px !important
+  padding-top: 20px !important
+
+.flex-item
+  float: left
+  font-weight: bold
+  font-size: 16px
+
+.label-left
+  text-align: right
+  padding-top: 40px !important
+p span
+  padding-left: 20px
+  text-decoration: underline
+  text-decoration-style: dashed
+
+#increase
+  margin-right: 10px
+
+.round-box
+  border: 2px solid red
+  border-radius: 12px
+  min-height: 100px
+  width: 340px
+
+
+fieldset
+  display: block
+  margin-left: 2px
+  margin-right: 2px
+  padding-top: 10px
+  padding-bottom: 0.625em
+  padding-left: 0.75em
+  padding-right: 0.75em
+  border: 2px groove black
+  border-radius: 20px
+  min-height: 200px
+  width: 340px
+
+legend
+  display: block
+  width: 60%
+  max-width: 80%
+  padding: 0
+  margin-bottom: .5rem
+  font-size: 1.5rem
+  line-height: inherit
+  color: inherit
+  white-space: normal
+  margin-left: 30px
+
+.form-left
+  float: left
+  margin-bottom: 30px
+
+.form-right
+  float: right
+  margin-bottom: 30px
+
+.input-label, .input-label-lg
+  min-width: 200px
+  margin-left: 10px
+  border-style: dotted
+  border-width: 0px 0px 1px 0px
+  text-align: center
+
+.input-label-lg
+  min-width: 600px
+
+.txt-label
+  min-width: 80px
+  height: 30px
+
+.table-label, th, td
+  border: 1px dotted black
+  text-align: center
+
+.table-label
+  width: 600px
+  margin-top: 20px
+  margin-bottom: 20px
+  margin-left: 50px
+
+.table-label-tr
+  height: 80px
+
+.footer
+  margin-top: 50px

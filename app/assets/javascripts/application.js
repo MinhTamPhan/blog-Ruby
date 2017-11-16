@@ -10,27 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
-//= require bootstrap
-//= require jquery_ujs
+//= require jquery
 //= require rails-ujs
-//= require turbolinks
-//= require_tree .
-document.addEventListener("turbolinks:load", function() {
-  if ($('li.active').html() != undefined) {
-      $('li.active').removeClass('active');
-  }
-  $('a[href="' + location.pathname + '"]').parent('li').addClass('active');
-});
-$().ready(function(){
-  // the body of this function is in assets/material-kit.js
-  materialKit.initSliders();
-        window_width = $(window).width();
-
-        if (window_width >= 992){
-            big_image = $('.wrapper > .header');
-
-    $(window).on('scroll', materialKitDemo.checkScrollForParallax);
-  }
-
-});
+//= require webfont
+//= require vendors.bundle
+//= require scripts.bundle
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap
+//= require dashboard
+//= require jquery-ui/widgets/datepicker
+//= require_tree ./common
+//= require_tree ./pages

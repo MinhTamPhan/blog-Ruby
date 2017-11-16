@@ -1,0 +1,9 @@
+/*
+ *= require style.bundle
+ *= require vendors.bundle
+ */
+
+.m-login.m-login--1.m-login--singin .m-login__signup,
+.m-login.m-login--1.m-login--singin .m-login__forget-password{
+  display: inline-block;
+}

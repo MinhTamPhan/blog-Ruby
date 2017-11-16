@@ -1,0 +1,7 @@
+= render 'shared/page_header', title: t('views.actions.new', model: @model_name)
+
+.m-portlet.m-portlet--tab
+  - if defined?(form)
+    = render form
+  - else
+    = render 'form'

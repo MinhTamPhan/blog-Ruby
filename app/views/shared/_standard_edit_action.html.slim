@@ -1,0 +1,7 @@
+= content_for :title do
+  = title if defined?(title)
+.m-portlet.m-portlet--tab
+  - if defined?(form)
+    = render form
+  - else
+    = render 'form'

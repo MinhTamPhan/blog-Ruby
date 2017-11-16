@@ -1,6 +1,82 @@
-.list-group
-  button.list-group-item type="button" Cras justo odio
-  button.list-group-item type="button" Dapibus ac facilisis in
-  button.list-group-item type="button" Morbi leo risus
-  button.list-group-item type="button" Porta ac consectetur ac
-  button.list-group-item type="button" Vestibulum at eros
+ul.m-topbar__nav.m-nav.m-nav--inline
+  li#m_quicksearch.m-nav__item.m-dropdown.m-dropdown--large.m-dropdown--arrow.m-dropdown--align-center.m-dropdown--mobile-full-width.m-dropdown--skin-light.m-list-search.m-list-search--skin-light data-dropdown-persistent="true" data-dropdown-toggle="click" data-search-type="dropdown"
+    a.m-nav__link.m-dropdown__toggle href="#"
+      span.m-nav__link-icon
+        i.flaticon-search-1
+    .m-dropdown__wrapper
+      span.m-dropdown__arrow.m-dropdown__arrow--center
+      .m-dropdown__inner
+        .m-dropdown__header
+          form.m-list-search__form
+            .m-list-search__form-wrapper
+              span.m-list-search__form-input-wrapper
+                input#m_quicksearch_input.m-list-search__form-input autocomplete="off" name="q" placeholder="Search..." type="text" value="" /
+              span#m_quicksearch_close.m-list-search__form-icon-close
+                i.la.la-remove
+        .m-dropdown__body
+          .m-dropdown__scrollable.m-scrollable data-max-height="300" data-mobile-max-height="200" data-scrollable="true"
+            .m-dropdown__content
+  li.m-nav__item.m-topbar__notifications.m-topbar__notifications--img.m-dropdown.m-dropdown--large.m-dropdown--header-bg-fill.m-dropdown--arrow.m-dropdown--align-center.m-dropdown--mobile-full-width data-dropdown-persistent="true" data-dropdown-toggle="click"
+    a#m_topbar_notification_icon.m-nav__link.m-dropdown__toggle href="#"
+      span.m-nav__link-badge.m-badge.m-badge--dot.m-badge--dot-small.m-badge--danger
+      span.m-nav__link-icon
+        i.flaticon-music-2
+    .m-dropdown__wrapper
+      span.m-dropdown__arrow.m-dropdown__arrow--center
+      .m-dropdown__inner
+        .m-dropdown__header.m--align-center
+          span.m-dropdown__header-title
+            | 9 New
+          span.m-dropdown__header-subtitle
+            | User Notifications
+        .m-dropdown__body
+          .m-dropdown__content
+            .tab-content
+              #topbar_notifications_notifications.tab-pane.active role="tabpanel"
+                .m-scrollable data-max-height="250" data-mobile-max-height="200" data-scrollable="true"
+                  .m-list-timeline.m-list-timeline--skin-light
+                    .m-list-timeline__items
+                      .m-list-timeline__item
+                        span.m-list-timeline__badge.-m-list-timeline__badge--state-success
+                        span.m-list-timeline__text
+                          | 12 new users registered
+                        span.m-list-timeline__time
+                          | Just now
+
+  li.m-nav__item.m-topbar__user-profile.m-topbar__user-profile--img.m-dropdown.m-dropdown--medium.m-dropdown--arrow.m-dropdown--header-bg-fill.m-dropdown--align-right.m-dropdown--mobile-full-width.m-dropdown--skin-light data-dropdown-toggle="click"
+    a.m-nav__link.m-dropdown__toggle href="#"
+      span.m-topbar__userpic
+        = image_tag "users/user2.jpg", class: 'm--img-rounded m--marginless m--img-centered'
+      span.m-topbar__username.m--hide
+        | Nick
+    .m-dropdown__wrapper
+      span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+      .m-dropdown__inner
+        .m-dropdown__header.m--align-center
+          .m-card-user.m-card-user--skin-dark
+            .m-card-user__pic
+              img.m--img-rounded.m--marginless alt="" src=""
+            .m-card-user__details
+              span.m-card-user__name.m--font-weight-500
+                | Mark Andre
+              a.m-card-user__email.m--font-weight-300.m-link href=""
+                | mark.andre@gmail.com
+        .m-dropdown__body
+          .m-dropdown__content
+            ul.m-nav.m-nav--skin-light
+              li.m-nav__section.m--hide
+                span.m-nav__section-text
+                  | Section
+              li.m-nav__item
+                a.m-nav__link href="header/profile.html"
+                  i.m-nav__link-icon.flaticon-profile-1
+                  span.m-nav__link-title
+                    span.m-nav__link-wrap
+                      span.m-nav__link-text
+                        | My Profile
+                      span.m-nav__link-badge
+                        span.m-badge.m-badge--success
+                          | 2
+              li.m-nav__separator.m-nav__separator--fit
+              li.m-nav__item
+                = link_to 'Sign out', destroy_user_session_path, :method=>'delete', class: 'btn m-btn--pill btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder'
