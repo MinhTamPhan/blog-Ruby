@@ -7,7 +7,12 @@ end
 
 ruby '2.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+<<<<<<< HEAD
+gem 'rails', '~> 5.1.4'
+gem "slim-rails"
+=======
 gem 'rails', '~> 5.1', '>= 5.1.4'
+>>>>>>> 27138c7f9d47784945d3a213f2802b15048779bc
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -28,7 +33,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
+<<<<<<< HEAD
+# gem 'bcrypt', '~> 3.1.7'
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'jquery-rails'
+=======
 gem 'bcrypt', '~> 3.1.7'
+>>>>>>> 27138c7f9d47784945d3a213f2802b15048779bc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

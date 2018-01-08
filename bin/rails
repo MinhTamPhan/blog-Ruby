@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#!/usr/bin/env ruby
+=======
 #!/usr/bin/env ruby.exe
+>>>>>>> 27138c7f9d47784945d3a213f2802b15048779bc
 APP_PATH = File.expand_path('../config/application', __dir__)
 require_relative '../config/boot'
 require 'rails/commands'

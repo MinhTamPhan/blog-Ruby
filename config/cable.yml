@@ -7,4 +7,4 @@ test:
 production:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: blog-Ruby_production
+  channel_prefix: frist_app_production

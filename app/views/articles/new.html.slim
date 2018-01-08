@@ -1,0 +1,8 @@
+-if @articles.any?
+  table#tbl.table.table-hover
+    th tilte
+    th text
+    - for item in @articles
+      tr
+        td.name = item.title
+        td.price = item.text
